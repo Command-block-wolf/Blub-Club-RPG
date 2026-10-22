@@ -1,0 +1,12 @@
+{
+  "name": "blub-club-signaling",
+  "version": "1.0.0",
+  "description": "Room-code signaling server for Blub Club RPG browser multiplayer (WebRTC).",
+  "main": "server.js",
+  "scripts": {
+	"start": "node server.js",
+	"test": "node test.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": { "ws": "^8.18.0" }
+}

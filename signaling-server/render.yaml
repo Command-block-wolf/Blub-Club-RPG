@@ -1,0 +1,14 @@
+# Optional: lets Render set the service up for you ("New" -> "Blueprint").
+# Only works if this file is at the TOP LEVEL of the GitHub repository.
+# The step-by-step guide uses the manual route instead, which is just as easy.
+services:
+  - type: web
+    name: blub-club-rooms
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /
+    envVars:
+      - key: ALLOWED_ORIGINS
+        sync: false   # Render asks you for the value (your Netlify address)
